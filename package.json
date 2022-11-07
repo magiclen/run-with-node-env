@@ -1,0 +1,45 @@
+{
+  "name": "run-with-node-env",
+  "version": "1.0.0",
+  "description": "Set the `NODE_ENV` variable on all platforms. Without `cross-spawn`, very slim.",
+  "main": "bin/index.js",
+  "bin": "bin/index.js",
+  "files": [
+    "bin"
+  ],
+  "scripts": {
+    "clean": "rimraf bin",
+    "build": "npm run clean && tsc",
+    "build:watch": "npm run build -- -w",
+    "lint": "eslint src",
+    "lint:fix": "npm run lint -- --fix",
+    "prepare": "git config core.hooksPath .githooks || exit 0",
+    "prepack": "npm run build"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magiclen/run-with-node-env.git"
+  },
+  "keywords": [
+    "with-node-env",
+    "cross-env",
+    "NODE_ENV"
+  ],
+  "author": "Magic Len",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/magiclen/run-with-node-env/issues"
+  },
+  "homepage": "https://magiclen.org/run-with-node-env/",
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "eslint": "^8.27.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.8.4"
+  }
+}
