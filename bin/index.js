@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-"use strict";
-const cp = require("child_process");
+import { spawnSync } from "child_process";
 const argv = process.argv;
 if (argv.length <= 3) {
     process.exit(0);
@@ -8,7 +7,7 @@ if (argv.length <= 3) {
 const nodeEnv = argv[2];
 const command = argv[3];
 const args = argv.slice(4);
-cp.spawnSync(command, args, {
+spawnSync(command, args, {
     env: {
         ...process.env,
         NODE_ENV: nodeEnv,

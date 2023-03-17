@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-var-requires
-const cp: typeof import("child_process") = require("child_process");
+import { spawnSync } from "child_process";
 
 const argv = process.argv;
 
@@ -13,7 +12,7 @@ const nodeEnv = argv[2];
 const command = argv[3];
 const args = argv.slice(4);
 
-cp.spawnSync(command, args, {
+spawnSync(command, args, {
     env: {
         ...process.env,
         NODE_ENV: nodeEnv,
