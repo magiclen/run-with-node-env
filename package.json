@@ -1,45 +1,47 @@
 {
-  "name": "run-with-node-env",
-  "version": "1.0.1",
-  "description": "Set the `NODE_ENV` variable on all platforms. Without `cross-spawn`, very slim.",
-  "type": "module",
-  "bin": "./bin/index.js",
-  "engines": {
-    "node": ">=16"
-  },
-  "files": [
-    "bin"
-  ],
-  "scripts": {
-    "clean": "rimraf bin",
-    "build": "npm run clean && tsc -p tsconfig.build.json",
-    "build:watch": "npm run build -- -w",
-    "lint": "eslint src",
-    "lint:fix": "npm run lint -- --fix",
-    "prepare": "git config core.hooksPath .githooks || exit 0",
-    "prepack": "npm run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/magiclen/run-with-node-env.git"
-  },
-  "keywords": [
-    "with-node-env",
-    "cross-env",
-    "NODE_ENV"
-  ],
-  "author": "Magic Len",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/magiclen/run-with-node-env/issues"
-  },
-  "homepage": "https://magiclen.org/run-with-node-env/",
-  "devDependencies": {
-    "@types/node": "^20.6.0",
-    "@typescript-eslint/eslint-plugin": "^6.6.0",
-    "@typescript-eslint/parser": "^6.6.0",
-    "eslint": "^8.49.0",
-    "rimraf": "^5.0.1",
-    "typescript": "^5.2.2"
-  }
+    "name": "run-with-node-env",
+    "version": "1.0.2",
+    "description": "Set the `NODE_ENV` variable on all platforms. Without `cross-spawn`, very slim.",
+    "type": "module",
+    "bin": "./bin/index.js",
+    "engines": {
+        "node": ">=16"
+    },
+    "files": [
+        "bin"
+    ],
+    "scripts": {
+        "clean": "rimraf bin",
+        "build": "npm run clean && tsc -p tsconfig.build.json",
+        "build:watch": "npm run build -- -w",
+        "lint": "eslint src",
+        "lint:fix": "npm run lint -- --fix",
+        "prepare": "git config core.hooksPath .githooks || exit 0",
+        "prepack": "npm run build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/magiclen/run-with-node-env.git"
+    },
+    "keywords": [
+        "with-node-env",
+        "cross-env",
+        "NODE_ENV"
+    ],
+    "author": "Magic Len",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/magiclen/run-with-node-env/issues"
+    },
+    "homepage": "https://magiclen.org/run-with-node-env/",
+    "devDependencies": {
+        "@types/node": "^20.8.2",
+        "@typescript-eslint/eslint-plugin": "^6.7.4",
+        "@typescript-eslint/parser": "^6.7.4",
+        "eslint": "^8.50.0",
+        "eslint-import-resolver-typescript": "^3.6.1",
+        "eslint-plugin-import": "^2.28.1",
+        "rimraf": "^5.0.5",
+        "typescript": "^5.2.2"
+    }
 }
