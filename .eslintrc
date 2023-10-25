@@ -407,7 +407,7 @@
         "import/no-extraneous-dependencies": [
             "error", 
             {
-                "devDependencies": true
+                "devDependencies": false
             }
         ],
         "import/no-mutable-exports": [
