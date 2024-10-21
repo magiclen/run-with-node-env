@@ -1,11 +1,11 @@
 {
     "name": "run-with-node-env",
-    "version": "1.0.2",
+    "version": "2.0.0",
     "description": "Set the `NODE_ENV` variable on all platforms. Without `cross-spawn`, very slim.",
     "type": "module",
     "bin": "./bin/index.js",
     "engines": {
-        "node": ">=16"
+        "node": ">=20"
     },
     "files": [
         "bin"
@@ -35,13 +35,16 @@
     },
     "homepage": "https://magiclen.org/run-with-node-env/",
     "devDependencies": {
-        "@types/node": "^20.8.2",
-        "@typescript-eslint/eslint-plugin": "^6.7.4",
-        "@typescript-eslint/parser": "^6.7.4",
-        "eslint": "^8.50.0",
-        "eslint-import-resolver-typescript": "^3.6.1",
-        "eslint-plugin-import": "^2.28.1",
-        "rimraf": "^5.0.5",
-        "typescript": "^5.2.2"
+        "@eslint/js": "^9.13.0",
+        "@stylistic/eslint-plugin": "^2.9.0",
+        "@types/eslint__js": "^8.42.3",
+        "@types/node": "^22.7.7",
+        "eslint": "^9.13.0",
+        "eslint-import-resolver-typescript": "^3.6.3",
+        "eslint-plugin-import": "^2.31.0",
+        "globals": "^15.11.0",
+        "rimraf": "^6.0.1",
+        "typescript": "~5.5.4",
+        "typescript-eslint": "^8.10.0"
     }
 }
