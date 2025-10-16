@@ -1,6 +1,6 @@
 {
     "name": "run-with-node-env",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "description": "Set the `NODE_ENV` variable on all platforms. Without `cross-spawn`, very slim.",
     "type": "module",
     "bin": "./bin/index.js",
