@@ -18,7 +18,7 @@ const spawnOptions: SpawnOptions = {
         NODE_ENV: nodeEnv,
     },
     argv0: argv[0],
-    shell: true,
+    shell: false,
     stdio: "inherit",
 };
 
