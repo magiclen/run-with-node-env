@@ -35,9 +35,12 @@ else {
     for (const signal of signals) {
         process.on(signal, () => {
             try {
+                // the pid has been checked before
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
                 process.kill(-child.pid, signal);
             }
             catch {
+                // do nothing
             }
         });
     }
