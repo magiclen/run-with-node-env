@@ -17,7 +17,10 @@ const spawnOptions = {
     stdio: "inherit",
 };
 if (process.platform === "win32") {
-    spawnSync(command, args, spawnOptions);
+    // On Windows, commands like `npm`, `npx`, `yarn`, and `pnpm` are actually
+    // `.cmd`/`.bat` files. They cannot be executed directly without a shell
+    // (Node throws EINVAL/ENOENT), so a shell is required to resolve and run them.
+    spawnSync(command, args, { ...spawnOptions, shell: true });
 }
 else {
     spawnOptions.detached = true;
